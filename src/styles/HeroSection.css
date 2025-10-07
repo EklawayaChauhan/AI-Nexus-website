@@ -1,0 +1,34 @@
+.hero {
+  position: fixed;            /* stays centered even if page scrolls */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;              /* full viewport height */
+  display: flex;
+  justify-content: center;    /* center horizontally */
+  align-items: center;        /* center vertically */
+  flex-direction: column;
+  text-align: center;
+  z-index: 2;                 /* above the video */
+  pointer-events: none;       /* allows navbar clicks */
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ai-logo {
+  width: 150px;               /* adjust logo size */
+  height: auto;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 8px rgba(0, 200, 255, 0.8));
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from { filter: drop-shadow(0 0 8px rgba(0, 200, 255, 0.5)); }
+  to { filter: drop-shadow(0 0 15px rgba(0, 200, 255, 1)); }
+}
