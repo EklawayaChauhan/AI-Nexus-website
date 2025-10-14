@@ -22,6 +22,7 @@ const calculateTimeLeft = () => {
 };
 
 function Countdown() {
+  const eventDate = new Date('2025-10-29T00:00:00'); // change to your date
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
   useEffect(() => {
