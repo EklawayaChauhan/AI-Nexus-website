@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import '../styles/Countdown.css';
 
 // The target date for the countdown
-const EVENT_DATE = new Date('2025-12-31T00:00:00');
+const EVENT_DATE = new Date('2025-10-29T00:00:00');
 
 // Helper function to calculate the time difference
 const calculateTimeLeft = () => {
