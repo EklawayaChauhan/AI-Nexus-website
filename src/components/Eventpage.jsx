@@ -5,62 +5,62 @@ import bgVideo from "/images/Space_Background.mp4";
 
 const drinks = [
   {
-    name: "",
+    name: "AI DEBATE",
     subtext: "Bold. Creamy. Irresistibly dark.",
     description:
       "Indulge in the ultimate chocolate experience — rich, creamy, and blended to perfection. Your favorite drink, now darker, smoother, and more irresistible than ever.",
-    image: "/images/Mars.png",
+    image: "/images/Earth.png",
     imageWidth: "750px",
-    pdfUrl: "file:///C:/Users/harsh/Downloads/WEBCRAFT.pdf", // Add PDF for this slide
+    pdfUrl: "/rulebooks/AI DEBATE .pdf", // Add PDF for this slide
   },
   {
-    name: "Dragon Splash",
+    name: "BOT OR NOT",
     subtext: "Exotic. Fruity. Fierce.",
     description:
       "A vibrant blend of dragon fruit with a tropical twist, bursting with bold flavor. Refresh your energy and awaken your senses.",
     image: "/images/Jupiter.png",
     imageWidth: "530px",
-    pdfUrl: "/pdfs/dragon-splash-registration.pdf", // Add PDF for this slide
+    pdfUrl: "/rulebooks/BOT OR NOT.pdf", // Add PDF for this slide
   },
   {
-    name: "Pineapple Zest",
+    name: "BUG HUNT",
     subtext: "Bright. Juicy. Refreshing.",
     description:
       "Zesty pineapple flavor that lifts your mood and refreshes your soul. The perfect tropical escape in every sip.",
     image: "/images/Saturn.png",
     imageWidth: "530px",
-    pdfUrl: "/pdfs/pineapple-registration.pdf", // Add PDF for this slide
+    pdfUrl: "/rulebooks/BUG HUNT.pdf", // Add PDF for this slide
   },
   {
-    name: "Strawberry Breeze",
+    name: "CODESPRINT HACKATHON",
     subtext: "Sweet. Creamy. Cool.",
     description:
       "A creamy strawberry blend made to chill your summer cravings. Smooth, sweet, and irresistibly refreshing.",
     image: "/images/Pluto.G09.watermarked.2k.png",
     imageWidth: "530px",
-    pdfUrl: "/pdfs/strawberry-registration.pdf", // Add PDF for this slide
+    pdfUrl: "/rulebooks/sCODESPRINT HACKATHON.pdf", // Add PDF for this slide
   },
   {
-    name: "Dragon Splash",
+    name: "TRADE TECH CHALLENGE ",
+    subtext: "Exotic. Fruity. Fierce.",
+    description:
+      "A vibrant blend of dragon fruit with a tropical twist, bursting with bold flavor. Refresh your energy and awaken your senses.",
+    image: "/images/Mars.png",
+    imageWidth: "530px",
+    pdfUrl: "/rulebooks/TRADE TECH CHALLENGE .pdf", // Add PDF for this slide
+  },
+  {
+    name: "WEBCRAFT",
     subtext: "Exotic. Fruity. Fierce.",
     description:
       "A vibrant blend of dragon fruit with a tropical twist, bursting with bold flavor. Refresh your energy and awaken your senses.",
     image: "/images/Jupiter.png",
     imageWidth: "530px",
-    pdfUrl: "/pdfs/dragon-splash-2-registration.pdf", // Add PDF for this slide
-  },
-  {
-    name: "Dragon Splash",
-    subtext: "Exotic. Fruity. Fierce.",
-    description:
-      "A vibrant blend of dragon fruit with a tropical twist, bursting with bold flavor. Refresh your energy and awaken your senses.",
-    image: "/images/Jupiter.png",
-    imageWidth: "530px",
-    pdfUrl: "/", // Add PDF for this slide
+    pdfUrl: "/rulebooks/WEBCRAFT.pdf", // Add PDF for this slide
   },
 ];
 
-const TARGET_TEXT = "Registration";
+const TARGET_TEXT = "Rule Book";
 const CYCLES_PER_LETTER = 2;
 const SHUFFLE_TIME = 50;
 const CHARS = "!@#$%^&*():{};|,.<>/?";

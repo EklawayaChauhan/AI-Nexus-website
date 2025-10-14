@@ -15,22 +15,22 @@ const teamMembers = [
   },
   {
     name: "Tejas",
-    role: "Creative Designer",
+    role: "Event Co coordinator",
     image: "/images/ananya.jpg",
   },
   {
     name: "Jayesh",
-    role: "Marketing Head",
+    role: "Treasurer",
     image: "/images/rohan.jpg",
   },
   {
     name: "Jayesh",
-    role: "Marketing Head",
+    role: "Core Member",
     image: "/images/rohan.jpg",
   },
   {
     name: "Jayesh",
-    role: "Marketing Head",
+    role: "Core Member",
     image: "/images/rohan.jpg",
   },
   {

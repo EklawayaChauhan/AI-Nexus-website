@@ -33,7 +33,8 @@ function Header() {
         <Link to="/" onClick={closeMenu}>Home</Link>
         <Link to="/about" onClick={closeMenu}>About</Link>
         <Link to="#schedule" onClick={closeMenu}>Schedule</Link>
-        <Link to="/event">Event</Link>
+        <Link to="/event">Games</Link>
+        <Link to="https://forms.gle/Z5gXHtGiq1f5497k9">Registration</Link>
       </nav>
 
       {/* Overlay for mobile menu */}

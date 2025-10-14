@@ -11,37 +11,43 @@
   width: 100%;
   height: 100vh;
   display: flex;
-  justify-content: center;   /* centers horizontally */
-  align-items: center;       /* centers vertically */
+  justify-content: center;
+  align-items: center;   /* ✅ ensures perfect vertical centering */
   flex-direction: column;
   text-align: center;
   z-index: 2;
-  pointer-events: none;      /* keeps navbar clickable */
+  pointer-events: none;
+  top: -60px; /* Adjust this value based on navbar height */
 }
+
 
 .hero-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.8rem;
+  gap: 0.3rem;           /* ✅ smaller vertical spacing (was 0.8rem) */
   color: white;
   font-family: "Space Mono", monospace;
   font-weight: 400;
   z-index: 1001;
-  padding-top: 0;            /* ✅ remove upper space */
-  transform: translateY(-20px); /* fine-tune vertical centering */
+  padding: 0;
+  margin: 0;
+  transform: none;
+  height: 100vh;
 }
 
+
+
 .ai-logo {
-  width: 150px;               /* adjust logo size */
+  width: 150px;
   height: auto;
-  margin-bottom: 10px;
-  padding-top: 0%;
+  margin-bottom: 0; /* ✅ remove the extra gap below the logo */
+  padding-top: 0;
   filter: drop-shadow(0 0 8px rgba(0, 200, 255, 0.8));
   animation: glow 2s ease-in-out infinite alternate;
-  
 }
+
 
 @keyframes glow {
   from { filter: drop-shadow(0 0 8px rgba(0, 200, 255, 0.5)); }
