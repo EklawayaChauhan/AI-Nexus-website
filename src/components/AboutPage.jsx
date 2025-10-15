@@ -4,30 +4,38 @@ import Header from "./Header.jsx";
 
 const teamMembers = [
   {
-    name: "Akshata patil",
+    name: "Akshata Patil",
     role: "Event Coordinator",
     image: "/images/Akshata.jpeg",
   },
   {
-    name: "Eklawaya Chauhan",
-    role: "Lead Developer",
-    image: "/images/Eklawaya_chauhan.jpeg",
-  },
-  {
-    name: "Om Ganwande",
+    name: "Manashree Jibhkate",
     role: "Event Co coordinator",
-    image: "/images/Om.jpeg",
-  },
-  {
-    name: "Manashree",
-    role: "Treasurer",
     image: "/images/Manashree.jpeg",
   },
   {
-    name: "Adity",
-    role: "Core Member",
+    name: "Aditi Parshavinikar",
+    role: "Treasurer",
     image: "/images/Adity.jpeg",
   },
+  {
+    name: "Om Ganwande",
+    role: "Core Member",
+    image: "/images/Om.jpeg",
+  },
+  {
+    name: "Parth Khairkar",
+    role: "Core Member",
+    image: "/images/Parth.jpg"
+  },
+  {
+    name: "Eklawaya Chauhan",
+    role: "Lead Web Dev.",
+    image: "/images/Eklawaya_chauhan.jpeg",
+  },
+  
+  
+  
 
 ];
 

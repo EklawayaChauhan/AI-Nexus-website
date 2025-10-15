@@ -11,6 +11,7 @@ const Header = lazy(() => import('./components/Header.jsx').catch(() => import('
 const HeroSection = lazy(() => import('./components/HeroSection').catch(() => import('./components/HeroSection.jsx')));
 const EventPage = lazy(() => import('./components/EventPage').catch(() => import('./components/EventPage.jsx')));
 const Schedule = lazy(() => import('./components/Schedule.jsx'));
+const Financier = lazy(() => import('./components/Financier.jsx'));
 
 // Loading component
 const LoadingScreen = () => (
@@ -53,6 +54,7 @@ function AppContent() {
         <Route path="/event" element={<EventPage />} />
         <Route path="/schedule" element={<Schedule />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/financier" element={<Financier/>} />
         
         
       </Routes>
