@@ -10,6 +10,7 @@ import AboutPage from "./components/AboutPage.jsx";
 const Header = lazy(() => import('./components/Header.jsx').catch(() => import('./components/Header.jsx')));
 const HeroSection = lazy(() => import('./components/HeroSection').catch(() => import('./components/HeroSection.jsx')));
 const EventPage = lazy(() => import('./components/EventPage').catch(() => import('./components/EventPage.jsx')));
+const Schedule = lazy(() => import('./components/Schedule.jsx'));
 
 // Loading component
 const LoadingScreen = () => (
@@ -50,7 +51,9 @@ function AppContent() {
           }
         />
         <Route path="/event" element={<EventPage />} />
+        <Route path="/schedule" element={<Schedule />} />
         <Route path="/about" element={<AboutPage />} />
+        
         
       </Routes>
     </Suspense>
