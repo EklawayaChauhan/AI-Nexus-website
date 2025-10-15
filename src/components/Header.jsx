@@ -15,7 +15,7 @@ function Header() {
 
   return (
     <header className="navbar">
-      <div className="logo">AI Nexus</div>
+      
       
       {/* Hamburger Icon - Only visible on mobile */}
       <button 

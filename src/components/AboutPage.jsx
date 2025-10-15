@@ -6,7 +6,7 @@ const teamMembers = [
   {
     name: "Akshata patil",
     role: "Event Coordinator",
-    image: "/images/harsh.jpg",
+    image: "/images/Akshata.jpeg",
   },
   {
     name: "Eklawaya Chauhan",
@@ -14,30 +14,21 @@ const teamMembers = [
     image: "/images/Eklawaya_chauhan.jpeg",
   },
   {
-    name: "Tejas",
+    name: "Om Ganwande",
     role: "Event Co coordinator",
-    image: "/images/ananya.jpg",
+    image: "/images/Om.jpeg",
   },
   {
-    name: "Jayesh",
+    name: "Manashree",
     role: "Treasurer",
-    image: "/images/rohan.jpg",
+    image: "/images/Manashree.jpeg",
   },
   {
-    name: "Jayesh",
+    name: "Adity",
     role: "Core Member",
-    image: "/images/rohan.jpg",
+    image: "/images/Adity.jpeg",
   },
-  {
-    name: "Jayesh",
-    role: "Core Member",
-    image: "/images/rohan.jpg",
-  },
-  {
-    name: "Jayesh",
-    role: "Marketing Head",
-    image: "/images/rohan.jpg",
-  },
+
 ];
 
 const AboutPage = () => {
@@ -62,7 +53,7 @@ const AboutPage = () => {
       {/* Main Content */}
       <div className="about-content">
         <section className="intro">
-          <h1>About the Event</h1>
+          <h1>What is NEXUS...?</h1>
           <p>
             <strong>AI NEXUS</strong> is a national-level celebration of innovation, technology, and collaboration. This two-day event brings together brilliant minds, top companies, and passionate students to explore the limitless possibilities of Artificial Intelligence and emerging technologies.
                 From thrilling competitions and creative challenges to insightful industry talks and networking opportunities, Techverse AI provides a platform for students, professionals, and innovators to showcase their skills, share ideas, and shape the future of technology.
