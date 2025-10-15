@@ -6,45 +6,45 @@ import bgVideo from "/images/Space_Background.mp4";
 const drinks = [
   {
     name: "AI DEBATE",
-    subtext: "Bold. Creamy. Irresistibly dark.",
+    subtext: "Debate over Artificial Intelligence.",
     description:
-      "Indulge in the ultimate chocolate experience — rich, creamy, and blended to perfection. Your favorite drink, now darker, smoother, and more irresistible than ever.",
+      "Welcome to the AI Debate Competition, where intellect, reasoning, and adaptability collide!This unique debate challenges participants to test their debating skills first against Artificial Intelligence (AI) and then against fellow human opponents",
     image: "/images/Earth.png",
     imageWidth: "750px",
     pdfUrl: "/rulebooks/AI DEBATE .pdf", // Add PDF for this slide
   },
   {
     name: "BOT OR NOT",
-    subtext: "Exotic. Fruity. Fierce.",
+    subtext: "Creativity for BOTs.",
     description:
-      "A vibrant blend of dragon fruit with a tropical twist, bursting with bold flavor. Refresh your energy and awaken your senses.",
-    image: "/images/Jupiter.png",
-    imageWidth: "530px",
+      " BOT-NOT is a super fun and interactive game where you get to guess whether a creation is made by AI or a human! As you play, you’ll earn points and have a blast competing for the top spot, all while sharpening your observation and analytical skills. Comejoin the fun and see how many you can get right ",
+      image: "/images/Jupiter.png",
+      imageWidth: "530px",
     pdfUrl: "/rulebooks/BOT OR NOT.pdf", // Add PDF for this slide
   },
   {
     name: "BUG HUNT",
-    subtext: "Bright. Juicy. Refreshing.",
+    subtext: "Decoding contest.",
     description:
-      "Zesty pineapple flavor that lifts your mood and refreshes your soul. The perfect tropical escape in every sip.",
+      " In the Find the Glitch game, participants will analyze given code snippets and identify errors or bugs present in them. Thegame will test their debugging skills across different levels, such as easy, moderate, and high difficulty. Each round will feature coding problems with logical, syntactical, or semantic errors, and participants will be required to find and correct them within a given time limit.",
     image: "/images/Saturn.png",
     imageWidth: "530px",
     pdfUrl: "/rulebooks/BUG HUNT.pdf", // Add PDF for this slide
   },
   {
     name: "CODESPRINT HACKATHON",
-    subtext: "Sweet. Creamy. Cool.",
+    subtext: "Hackthon.",
     description:
-      "A creamy strawberry blend made to chill your summer cravings. Smooth, sweet, and irresistibly refreshing.",
-    image: "/images/Pluto.G09.watermarked.2k.png",
+      "Welcome to CodeSprint, the ultimate hackathon where innovation, teamwork, and coding brilliance collide! Your mission? To ideate, design, and build impactful solutions within the given timeframe.",
+     image: "/images/Pluto.G09.watermarked.2k.png",
     imageWidth: "530px",
     pdfUrl: "/rulebooks/sCODESPRINT HACKATHON.pdf", // Add PDF for this slide
   },
   {
     name: "TRADE TECH CHALLENGE ",
-    subtext: "Exotic. Fruity. Fierce.",
+    subtext: "Trading Contest.",
     description:
-      "A vibrant blend of dragon fruit with a tropical twist, bursting with bold flavor. Refresh your energy and awaken your senses.",
+      " This is your chance to prove your financial instincts and analytical skills under pressure. Think fast, trade smart, and may the best trader win! 📈⚡",
     image: "/images/Mars.png",
     imageWidth: "530px",
     pdfUrl: "/rulebooks/TRADE TECH CHALLENGE .pdf", // Add PDF for this slide
@@ -53,7 +53,7 @@ const drinks = [
     name: "WEBCRAFT",
     subtext: "Exotic. Fruity. Fierce.",
     description:
-      "A vibrant blend of dragon fruit with a tropical twist, bursting with bold flavor. Refresh your energy and awaken your senses.",
+      "Teams will design their main page with dynamic features, animations, and interactive elements",
     image: "/images/Jupiter.png",
     imageWidth: "530px",
     pdfUrl: "/rulebooks/WEBCRAFT.pdf", // Add PDF for this slide
