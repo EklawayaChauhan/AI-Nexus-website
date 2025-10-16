@@ -1,0 +1,119 @@
+/* Financier.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.5);
+  z-index: -1; /* CHANGED: Pushes video behind all other content */
+}
+
+/* --- Page Setup --- */
+.financier-page {
+  font-family: 'Roboto', sans-serif;
+  /* The background-color is now a fallback for when the video doesn't load */
+  background-color: #1a1a1a;
+  padding: 50px 20px;
+  min-height: 100vh;
+}
+
+.page-title {
+  padding-top: 50px;
+  text-align: center;
+  font-size: 2.5rem;
+  color: #ebeaea;
+  margin-bottom: 40px;
+  font-weight: 700;
+  position: relative; /* ADDED: Allows z-index to work */
+  z-index: 1;      /* ADDED: Puts title above the video layer */
+}
+
+/* --- Card Container --- */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px; /* Space between cards */
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative; /* ADDED: Allows z-index to work */
+  z-index: 1;      /* ADDED: Puts cards above the video layer */
+}
+
+/* --- Individual Card Styling --- */
+.financier-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px); /* ADDED: Nice glass effect over the video */
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1); /* ADDED: Subtle border */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.financier-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(217, 217, 217, 0.2);
+}
+
+/* --- Card Sections --- */
+.card-header {
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Adjusted for transparency */
+  min-height: 100px;
+}
+
+.card-logo {
+  max-width: 180px;
+  max-height: 50px;
+  object-fit: contain;
+}
+
+.card-body {
+  padding: 15px;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.card-name {
+  font-size: 1.4rem;
+  color: #eeeeee;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.card-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #c8c8c8;
+}
+
+.card-footer {
+  padding: 25px;
+  text-align: center;
+}
+
+.card-button {
+  display: inline-block;
+  background-color: #7a2ed7;
+  color: #ffffff;
+  padding: 12px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+  background-color: #8f33ff;
+}

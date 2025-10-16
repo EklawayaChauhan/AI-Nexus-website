@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/Schedule.css'; // Import the corresponding CSS file
+import Header from "./Header.jsx";
 
 const Schedule = () => {
     // State to keep track of the currently active day
@@ -12,6 +13,7 @@ const Schedule = () => {
 
     return (
         <div className="content-wrapper">
+            <Header/>
             <section className="schedule-section" id="schedule-start">
                 <div className="schedule-header">
                     <h1>SCHEDULE</h1>
