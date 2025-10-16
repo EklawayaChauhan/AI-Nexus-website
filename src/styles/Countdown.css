@@ -1,28 +1,14 @@
 @font-face {
   font-family: 'Digital-7';
-  src: url('public/font/digital-7/digital-7.ttf') format('truetype');
-  font-weight: 900;
+  src: url('/font/digital-7/digital-7.ttf') format('truetype');
+  /* Note: Corrected path to be absolute from the public folder */
 }
 
 @font-face {
   font-family: 'Roboto_mono';
-  src: url('AI-Nexus-website/public/font/Share_Tech_Mono/ShareTechMono-Regular.ttf') format('truetype');
-  font-weight: 900;
+  src: url('/font/Share_Tech_Mono/ShareTechMono-Regular.ttf') format('truetype');
+  /* Note: Corrected path */
 }
-
-/* Add this new class to your existing CSS file */
-.countdown .separator {
-  font-family: 'Digital-7';
-  font-size: 5rem; /* Match the font size of your numbers */
-  font-weight: bold;
-  color: #ffffff; /* Match the color of your numbers */
-  text-shadow: 0 0 10px #ffffff;
-  
-  /* Helps with vertical alignment */
-  line-height: 1;
-  padding-bottom: 50px;
-}
-
 
 .countdown {
   display: flex;
@@ -31,7 +17,7 @@
   gap: 0px;
   color: white;
   text-align: center;
-  margin-top: 20px;
+  transform: translateY(-4vh);
   font-family: 'Orbitron', sans-serif;
   letter-spacing: 1px;
 }
@@ -46,11 +32,21 @@
   font-family: 'Digital-7';
   font-size: 4rem;
   font-weight: bold;
-  color:#f0f0f0;
+  color: #f0f0f0;
   text-shadow: 0 0 10px #ffffff;
   padding-bottom: 10px;
-  width: 120px; /* Fixed width for stability */
+  width: 120px; /* Fixed width for stability on desktop */
   text-align: center;
+}
+
+.countdown .separator {
+  font-family: 'Digital-7';
+  font-size: 4rem; /* Matched to number size */
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 0 0 10px #ffffff;
+  line-height: 1;
+  padding-bottom: 40px; /* Adjusted alignment */
 }
 
 .countdown label {
@@ -65,4 +61,35 @@
   text-align: center;
   font-size: 1.5rem;
   margin-top: 20px;
+}
+
+/* ============================================
+   ✅ Mobile Optimizations
+   ============================================ */
+@media (max-width: 768px) {
+  .countdown {
+    gap: 0px; /* Reduced gap for smaller screens */
+    /* Make the countdown wrap if needed, though unlikely with smaller fonts */
+    flex-wrap: wrap; 
+  }
+
+  .countdown span {
+    font-size: 2.5rem; /* Reduced number font size */
+    width: auto; /* Allow width to be flexible */
+    min-width: 40px; /* Ensure some minimum space */
+    padding-bottom: 5px;
+  }
+
+  .countdown .separator {
+    font-size: 2.5rem; /* Reduced separator font size */
+    padding-bottom: 25px;
+  }
+
+  .countdown label {
+    font-size: 0.8rem; /* Reduced label font size */
+  }
+
+  .time-over {
+    font-size: 1.2rem;
+  }
 }
