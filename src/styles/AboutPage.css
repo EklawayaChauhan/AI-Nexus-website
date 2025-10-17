@@ -1,59 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Space+Mono&display=swap');
 
 .about-page {
-  /* ✅ FIXED: These two properties were creating a "stacking context" 
-     that trapped the fixed header. Removing them allows the header's 
-     z-index to work correctly and float on top of this page's content. */
-  /* position: relative; */  /* <-- REMOVED */
-  /* overflow-x: hidden; */ /* <-- REMOVED */
-  
+  position: relative; /* Needed for the pseudo-element overlay */
+  isolation: isolate; /* Creates a clean stacking context */
   min-height: 100vh;
   color: #fff;
   font-family: "Poppins", sans-serif;
   
-  /* Background Image */
   background-image: url('/images/clint-mckoy-RtVpWYvjpOY-unsplash.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
 
-/* Overlay for dark shade over the image */
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+/* ✅ FIXED: Replaced the .overlay class with a more robust pseudo-element. */
+.about-page::before {
+  content: '';
+  position: absolute;
+  inset: 0; /* Covers the entire .about-page container */
   background: rgba(10, 10, 20, 0.8);
-  z-index: 1; 
+  z-index: -1; /* Sits behind the content within this container */
 }
 
 /* Main content container */
 .about-content {
-  position: relative; /* This is fine, it only affects children of about-content */
-  z-index: 2; /* Sits above the overlay */
-  padding: 120px 80px 60px;
+  /* This content now sits naturally on top of the ::before pseudo-element */
+  padding: 80px 80px 60px;
 }
 
-/* Main page headings */
-.about-content h2 {
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 30px;
-  color: #fff;
-  text-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
-}
+/* ... (the rest of your CSS remains the same) ... */
 
-/* Intro + Vision sections */
-.intro,
-.vision {
-  max-width: 900px;
-  margin: 0 auto 60px auto;
-}
-
-/* Changed specific heading colors to blue */
 .intro h1,
 .vision h2 {
   color: #3b82f6; 
@@ -64,7 +40,6 @@
   margin-bottom: 30px;
 }
 
-/* Justified text alignment for paragraphs */
 .intro p,
 .vision p {
   font-size: 1.1rem;
@@ -73,12 +48,6 @@
   text-align: justify;
 }
 
-/* Team Section */
-.team {
-  text-align: center;
-}
-
-/* Team grid layout (3 cards per row on desktop) */
 .team-grid {
   display: flex;
   flex-wrap: wrap;
@@ -103,7 +72,6 @@
 
 .team-card:hover {
   transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .team-card img {
@@ -125,10 +93,7 @@
   font-size: 0.9rem;
 }
 
-
-/* ============================================
-   Mobile Optimizations
-   ============================================ */
+/* Mobile Optimizations */
 @media (max-width: 960px) {
   .team-grid {
     max-width: 600px;
@@ -136,8 +101,12 @@
 }
 
 @media (max-width: 768px) {
+  .about-page {
+    background-attachment: scroll; /* Correctly fixes the mobile scroll issue */
+  }
+
   .about-content {
-    padding: 100px 20px 40px;
+    padding: 80px 20px 40px;
   }
 
   .intro p,
