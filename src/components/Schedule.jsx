@@ -48,45 +48,30 @@ const Schedule = () => {
                             <div className="timeline-event">
                                 <div className="event-content">
                                     <h3>INAUGURATION + SPEAKER SESSION</h3>
-                                    <p>10:00 AM - 11:45 AM</p>
+                                    <p>10:00 AM - 11:00 AM</p>
                                 </div>
                                 <div className="event-marker"></div>
                             </div>
                             <div className="timeline-event">
                                 <div className="event-content">
-                                    <h3>HTTPS FIND + REAL TRADE MARKET</h3>
-                                    <p>12:00 PM - 01:30 PM</p>
+                                    <h3>BOT OR NOT & Trading tech challenge</h3>
+                                    <p>11:15 PM - 12:45 PM</p>
                                 </div>
                                 <div className="event-marker"></div>
                             </div>
                             <div className="timeline-event">
                                 <div className="event-content">
-                                    <h3>BREAK</h3>
-                                    <p>01:30 PM - 02:00 PM</p>
+                                    <h3>Meme Minds + Bug Hunt</h3>
+                                    <p>01:00 PM - 02:30 PM</p>
                                 </div>
                                 <div className="event-marker"></div>
                             </div>
                             <div className="timeline-event">
                                 <div className="event-content">
-                                    <h3>PANEL DISCUSSION</h3>
-                                    <p>02:00 PM - 4:00 PM</p>
+                                    <h3>Webcraft  + AI Debate</h3>
+                                    <p>02:45 PM - 04:15 PM</p>
                                 </div>
-                                <div className="event-marker"></div>
-                            </div>
-                            <div className="timeline-event">
-                                <div className="event-content">
-                                    <h3>MEME MAKER + AI OR NOT</h3>
-                                    <p>04:00 PM - 05:00 PM</p>
-                                </div>
-                                <div className="event-marker"></div>
-                            </div>
-                            <div className="timeline-event">
-                                <div className="event-content">
-                                    <h3>AI DEVELOP + FIND THE GLITCH</h3>
-                                    <p>05:00 PM - 06:00 PM</p>
-                                </div>
-                                <div className="event-marker"></div>
-                            </div>
+                                                      </div>
                         </div>
                     )}
 
@@ -102,22 +87,22 @@ const Schedule = () => {
                             </div>
                             <div className="timeline-event">
                                 <div className="event-content">
-                                    <h3>WORKSHOP: ETHICAL AI</h3>
-                                    <p>09:30 AM - 11:30 AM: Deep dive into bias detection and fairness models.</p>
+                                    <h3>CodeSprint (Hackathon)</h3>
+                                    <p>10:00 AM - 4:00 AM: Deep dive and showcase your creativity.</p>
                                 </div>
                                 <div className="event-marker"></div>
                             </div>
                             <div className="timeline-event">
                                 <div className="event-content">
-                                    <h3>CLOSING CEREMONY & PRIZE DISTRIBUTION</h3>
-                                    <p>11:30 AM - 12:30 PM</p>
+                                    <h3>Evaluation mentor round</h3>
+                                    <p>12:00 PM</p>
                                 </div>
                                 <div className="event-marker"></div>
                             </div>
                             <div className="timeline-event">
                                 <div className="event-content">
-                                    <h3>NETWORKING LUNCH</h3>
-                                    <p>12:30 PM - 01:30 PM: Final chance to connect with speakers and participants.</p>
+                                    <h3>Final evaluation </h3>
+                                    <p>Starts at 3.30 PM</p>
                                 </div>
                                 <div className="event-marker"></div>
                             </div>

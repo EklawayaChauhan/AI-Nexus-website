@@ -44,7 +44,7 @@ const drinks = [
   
   {
     name: "WEBCRAFT",
-    subtext: "Exotic. Fruity. Fierce.",
+    subtext: "Web Creativity.",
     description:
       "Teams will design their main page with dynamic features, animations, and interactive elements",
     image: "/images/Jupiter.png",
@@ -147,9 +147,6 @@ const EncryptButton = ({ pdfUrl }) => {
 const EventPage = () => {
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState(1);
-  const minSwipeDistance = 50;
-  const [touchStart, setTouchStart] = useState(null);
-  const [touchEnd, setTouchEnd] = useState(null);
 
   const next = () => {
     setDirection(1);
@@ -169,40 +166,87 @@ const EventPage = () => {
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
-  
-  // ✅ ADDED: Touch event handlers for mobile swipe
-  const onTouchStart = (e) => {
-    setTouchEnd(null); 
-    setTouchStart(e.targetTouches[0].clientX);
-  };
 
-  const onTouchMove = (e) => setTouchEnd(e.targetTouches[0].clientX);
+  // Mouse wheel navigation with better throttling
+  useEffect(() => {
+    let scrollTimeout = null;
+    let accumulatedDelta = 0;
+    const threshold = 50;
 
-  const onTouchEnd = () => {
-    if (!touchStart || !touchEnd) return;
-    const distance = touchStart - touchEnd;
-    const isLeftSwipe = distance > minSwipeDistance;
-    const isRightSwipe = distance < -minSwipeDistance;
+    const handleWheel = (e) => {
+      accumulatedDelta += Math.abs(e.deltaY) > Math.abs(e.deltaX) ? e.deltaY : e.deltaX;
 
-    if (isLeftSwipe) {
-      next();
-    } else if (isRightSwipe) {
-      prev();
-    }
-    setTouchStart(null);
-    setTouchEnd(null);
-  };
+      if (scrollTimeout) {
+        clearTimeout(scrollTimeout);
+      }
+
+      scrollTimeout = setTimeout(() => {
+        if (Math.abs(accumulatedDelta) > threshold) {
+          if (accumulatedDelta > 0) {
+            next();
+          } else {
+            prev();
+          }
+        }
+        accumulatedDelta = 0;
+      }, 150);
+    };
+
+    window.addEventListener("wheel", handleWheel, { passive: true });
+    return () => {
+      window.removeEventListener("wheel", handleWheel);
+      if (scrollTimeout) clearTimeout(scrollTimeout);
+    };
+  }, [current]);
+
+  // Touch navigation for mobile
+  useEffect(() => {
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let touchEndX = 0;
+    let touchEndY = 0;
+
+    const handleTouchStart = (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+      touchStartY = e.changedTouches[0].screenY;
+    };
+
+    const handleTouchEnd = (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      touchEndY = e.changedTouches[0].screenY;
+      handleSwipe();
+    };
+
+    const handleSwipe = () => {
+      const deltaX = touchEndX - touchStartX;
+      const deltaY = touchEndY - touchStartY;
+      const threshold = 50;
+
+      // If horizontal swipe is greater than vertical and exceeds threshold, navigate carousel
+      if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > threshold) {
+        if (deltaX > 0) {
+          prev(); // Swipe right -> previous
+        } else {
+          next(); // Swipe left -> next
+        }
+      }
+      // Vertical swipes are allowed for page scrolling
+    };
+
+    window.addEventListener("touchstart", handleTouchStart, { passive: true });
+    window.addEventListener("touchend", handleTouchEnd, { passive: true });
+
+    return () => {
+      window.removeEventListener("touchstart", handleTouchStart);
+      window.removeEventListener("touchend", handleTouchEnd);
+    };
+  }, [current]);
 
   const drink = drinks[current];
 
   return (
-    <div 
-      className="eventpage"
-      onTouchStart={onTouchStart}
-      onTouchMove={onTouchMove}
-      onTouchEnd={onTouchEnd}
-    >
-      <Header/>
+    <div className="eventpage">
+      {/* Background video */}
       <video
         autoPlay muted loop playsInline
         id="event-bg-video"

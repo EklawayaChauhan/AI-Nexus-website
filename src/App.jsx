@@ -2,6 +2,7 @@ import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import './styles/App.css';
 import AboutPage from "./components/AboutPage.jsx";
+import EarthBackground from './assets/Earth_background.mp4';
 
 
 
@@ -9,7 +10,7 @@ import AboutPage from "./components/AboutPage.jsx";
 // Lazy load components
 const Header = lazy(() => import('./components/Header.jsx').catch(() => import('./components/Header.jsx')));
 const HeroSection = lazy(() => import('./components/HeroSection').catch(() => import('./components/HeroSection.jsx')));
-const EventPage = lazy(() => import('./components/EventPage').catch(() => import('./components/EventPage.jsx')));
+const EventPage = lazy(() => import('./components/Eventpage').catch(() => import('./components/Eventpage.jsx')));
 const Schedule = lazy(() => import('./components/Schedule.jsx'));
 const Financier = lazy(() => import('./components/Financier.jsx'));
 
@@ -44,7 +45,7 @@ function AppContent() {
           element={
             <>
               <video autoPlay muted loop playsInline id="background-video">
-                <source src="/src/assets/Earth_background.mp4" type="video/mp4" />
+                <source src={EarthBackground} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
               <HeroSection />

@@ -1,5 +1,8 @@
 import React from 'react';
 import '../styles/Financier.css';
+import bgVideo from "../assets/Sponcers_background.mp4";
+
+
 
 // Data for each financier company
 const financierData = [
@@ -46,7 +49,7 @@ const FinancierPage = () => {
         playsInline
         className="background-video"
       >
-        <source src="/images/854225-hd_1920_1080_30fps.mp4" type="video/mp4" />
+        <source src={bgVideo} type="video/mp4" />
       </video>
       <h1 className="page-title">Our Company Partners</h1>
       <div className="card-container">
