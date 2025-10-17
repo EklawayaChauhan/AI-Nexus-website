@@ -149,6 +149,8 @@ const EncryptButton = ({ pdfUrl }) => {
 const EventPage = () => {
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState(1);
+  const [touchStart, setTouchStart] = useState(null);
+  const [touchEnd, setTouchEnd] = useState(null);
 
   const next = () => {
     setDirection(1);
@@ -206,10 +208,45 @@ const EventPage = () => {
     };
   }, [current]);
 
+  // Touch navigation for mobile
+  const minSwipeDistance = 50;
+
+  const onTouchStart = (e) => {
+    setTouchEnd(null);
+    setTouchStart({ x: e.targetTouches[0].clientX, y: e.targetTouches[0].clientY });
+  };
+
+  const onTouchMove = (e) => {
+    setTouchEnd({ x: e.targetTouches[0].clientX, y: e.targetTouches[0].clientY });
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const deltaX = touchStart.x - touchEnd.x;
+    const deltaY = touchStart.y - touchEnd.y;
+    const absDeltaX = Math.abs(deltaX);
+    const absDeltaY = Math.abs(deltaY);
+
+    // Only trigger swipe if horizontal movement is greater than vertical
+    if (absDeltaX > absDeltaY && absDeltaX > minSwipeDistance) {
+      if (deltaX > 0) {
+        next();
+      } else {
+        prev();
+      }
+    }
+    // If vertical movement is greater, allow default scrolling
+  };
+
   const drink = drinks[current];
 
   return (
-    <div className="eventpage">
+    <div
+      className="eventpage"
+      onTouchStart={onTouchStart}
+      onTouchMove={onTouchMove}
+      onTouchEnd={onTouchEnd}
+    >
       {/* Background video */}
       <video
         autoPlay

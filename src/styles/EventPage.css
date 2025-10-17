@@ -436,6 +436,7 @@ body {
 @media (max-width: 768px) {
   .eventpage {
     overflow-x: hidden;
+    overflow-y: auto;
   }
 
   .event-content {
