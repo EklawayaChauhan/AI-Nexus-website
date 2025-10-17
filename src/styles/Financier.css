@@ -9,47 +9,47 @@
   height: 100%;
   object-fit: cover;
   filter: brightness(0.5);
-  z-index: -1; /* CHANGED: Pushes video behind all other content */
+  z-index: -1;
 }
 
-/* --- Page Setup --- */
 .financier-page {
   font-family: 'Roboto', sans-serif;
-  /* The background-color is now a fallback for when the video doesn't load */
   background-color: #1a1a1a;
-  padding: 50px 20px;
+  /* ✅ FIXED: Added 80px of top padding to make space for the header. */
+  padding: 80px 20px 50px; 
   min-height: 100vh;
 }
 
 .page-title {
-  padding-top: 50px;
   text-align: center;
   font-size: 2.5rem;
   color: #ebeaea;
   margin-bottom: 40px;
   font-weight: 700;
-  position: relative; /* ADDED: Allows z-index to work */
-  z-index: 1;      /* ADDED: Puts title above the video layer */
+  position: relative;
+  z-index: 1;
 }
+
+/* ... rest of the file is correct ... */
 
 /* --- Card Container --- */
 .card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px; /* Space between cards */
+  gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
-  position: relative; /* ADDED: Allows z-index to work */
-  z-index: 1;      /* ADDED: Puts cards above the video layer */
+  position: relative;
+  z-index: 1;
 }
 
 /* --- Individual Card Styling --- */
 .financier-card {
   background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(5px); /* ADDED: Nice glass effect over the video */
+  backdrop-filter: blur(5px);
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.1); /* ADDED: Subtle border */
+  border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   width: 320px;
   display: flex;
@@ -68,7 +68,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Adjusted for transparency */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   min-height: 100px;
 }
 
