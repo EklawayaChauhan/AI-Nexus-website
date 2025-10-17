@@ -1,272 +1,19 @@
-
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-   font-family: "Space Mono", monospace;
-  font-weight: 400;
-  font-style: normal;
-}
-
-body {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-}
-
-.hero {
-  position: relative; 
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
-}
-
-.hero-gradient {
-  position: absolute; 
-  top: 0;
-  left: 0;
-  z-index: 0;
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(
-    to bottom,
-    #c41e3a 0%,  
-    #a01729 50%,
-    #8b1520 100%    
-  );
-}
-
-.hero-img {
-  position: absolute; 
-  z-index: 2;
-  bottom: 0;
-  right: 15%;
-  height: 75vh;
-  max-height: 600px;
-  filter: drop-shadow(0px 20px 40px rgba(0, 0, 0, 0.4));
-}
-
-.bg {
-  position: absolute;
-  z-index: 1;
-}
-
-.bg0 {
-  top: 8%;
-  right: 5%;
-  width: 200px;
-  opacity: 0.6;
-}
-
-.bg1 {
-  bottom: 25%;
-  left: 8%;
-  width: 180px;
-  opacity: 0.5;
-}
-
-.bg2 {
-  top: 30%;
-  left: 35%;
-  width: 220px;
-  opacity: 0.6;
-}
-
-.bg3 {
-  top: 15%;
-  left: 5%;
-  width: 150px;
-  opacity: 0.5;
-}
-
-.bg4 {
-  bottom: 20%;
-  right: 25%;
-  width: 200px;
-  opacity: 0.6;
-}
-
-.bg5 {
-  bottom: 10%;
-  right: 60%;
-  width: 190px;
-  opacity: 0.5;
-}
-
-.bg6 {
-  top: 40%;
-  right: 8%;
-  width: 240px;
-  opacity: 0.6;
-}
-
-.hero-content {
-  position: absolute;
-  top: 50%;
-  left: 8%;
-  transform: translateY(-50%);
-  z-index: 2;
-  color: white;
-  max-width: 500px;
-}
-
-.drink-title {
-  font-size: 5.5rem;
-  font-weight: 800;
-  margin-bottom: 1rem;
-  color: #fff;
-  letter-spacing: -2px;
-  line-height: 0.95;
-  font-family: 'SoDo Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  text-transform: capitalize;
-}
-
-.drink-subtext {
-  font-size: 1.3rem;
-  font-weight: 400;
-  margin-bottom: 2rem;
-  color: #fff;
-  letter-spacing: 1px;
-  font-family: 'Lander', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-.hero-text {
-  color: #fff;
-  font-size: 1.15rem;
-  max-width: 450px;
-  font-weight: 400;
-  line-height: 1.6;
-  font-family: 'Lander', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-.arrows {
-  position: absolute;
-  bottom: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 2rem;
-  z-index: 3;
-}
-
-.arrow {
-  height: 60px;
-  width: 60px;
-  background-color: rgba(255, 255, 255, 1); 
-  border: none;
-  border-radius: 50%;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #1e3932;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-}
-
-.arrow:hover {
-  background-color: #f3f3f3;
-  transform: scale(1.08);
-}
-
-.drink-bg-word {
-  position: absolute;
-  top: 50%;
-  left: 30%; 
-  transform: translate(-50%, -50%); 
-  font-size: 16vw;
-  font-weight: 900;
-  color: rgba(255, 255, 255, 0.04);
-  z-index: 1;
-  letter-spacing: 10px;
-  pointer-events: none;
-  user-select: none;
-  text-transform: uppercase;
-  white-space: nowrap;
-  font-family: 'SoDo Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-.gradient-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  overflow: hidden;
-}
-
-/* Responsive adjustments */
-@media (max-width: 1400px) {
-  .drink-title {
-    font-size: 4.5rem;
-  }
-  
-  .hero-img {
-    right: 10%;
-    height: 70vh;
-  }
-}
-
-@media (max-width: 1024px) {
-  .drink-title {
-    font-size: 3.5rem;
-  }
-  
-  .hero-img {
-    height: 60vh;
-    right: 5%;
-  }
-  
-  .hero-content {
-    left: 5%;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero-content {
-    left: 50%;
-    top: 12%;
-    transform: translate(-50%, 0);
-    text-align: center;
-  }
-  
-  .drink-title {
-    font-size: 2.8rem;
-  }
-  
-  .drink-subtext {
-    font-size: 1.1rem;
-  }
-  
-  .hero-text {
-    font-size: 1rem;
-  }
-  
-  .hero-img {
-    bottom: 0;
-    right: 50%;
-    transform: translateX(50%);
-    height: 50vh;
-  }
-  
-  .arrows {
-    bottom: 5%;
-  }
-}
-
+/* EventPage.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Space+Mono&display=swap');
 
 .eventpage {
-  position: relative;
-  overflow: hidden;
   height: 100vh;
   width: 100%;
+  overflow: hidden;
   color: #fff;
   font-family: "Poppins", sans-serif;
+  /* ✅ FIXED: Added padding-top to push content below the header. */
+  padding-top: 80px; 
+  /* ✅ This ensures the container still fills the screen height correctly. */
+  box-sizing: border-box; 
 }
+/* ... rest of the file is correct ... */
 
-/* 🎥 Video background */
 .background-video {
   position: fixed;
   top: 0;
@@ -274,31 +21,43 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 0;
+  z-index: -1;
   filter: brightness(0.6);
 }
 
-/* Content layout */
+/* Main content layout using CSS Grid */
 .event-content {
   position: relative;
   z-index: 2;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two equal columns */
   align-items: center;
-  justify-content: space-between;
   height: 100%;
-  padding: 0 100px;
+  padding: 0 5%;
+  gap: 2rem;
 }
 
-/* Text section */
+/* NEW: Wrapper for grid items to stabilize layout */
+.grid-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Text section styling */
 .drink-info {
-  flex: 1;
-  max-width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .drink-info h1 {
   font-size: 4rem;
   font-weight: 800;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+  color: #3b82f6; 
+  text-shadow: 0 0 15px rgba(59, 130, 246, 0.6), 0 0 5px rgba(59, 130, 246, 0.8);
 }
 
 .drink-info h3 {
@@ -312,14 +71,17 @@ body {
   font-size: 1rem;
   color: #e6e6e6;
   line-height: 1.6;
+  max-width: 500px;
 }
 
-/* Image section */
+/* Image section styling */
 .drink-image {
-  flex: 1;
-  z-index: 2;
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  max-height: 80vh;
+  object-fit: contain; /* Prevents stretching */
   user-select: none;
-  height: 650px;
 }
 
 /* Navigation arrows */
@@ -437,6 +199,8 @@ body {
   .eventpage {
     overflow-x: hidden;
     overflow-y: auto;
+    height: auto;
+    min-height: 100vh;
   }
 
   .event-content {
@@ -606,134 +370,48 @@ body {
   overflow: hidden;
   transition: all 0.3s ease;
   font-family: 'Courier New', monospace;
+  max-width: 280px;
 }
 
-.encrypt-button:hover {
-  color: #c7d2fe;
-}
+.encrypt-button:hover { color: #c7d2fe; }
+.encrypt-button-content { position: relative; z-index: 10; display: flex; align-items: center; justify-content: center; gap: 0.5rem; }
+.encrypt-button-gradient { position: absolute; inset: 0; z-index: 0; scale: 1.25; background: linear-gradient( to top, rgba(129, 140, 248, 0) 0%, rgba(129, 140, 248, 0) 40%, rgba(129, 140, 248, 1) 50%, rgba(129, 140, 248, 0) 60%, rgba(129, 140, 248, 0) 100% ); opacity: 0; transition: opacity 0.3s; }
+.encrypt-button:hover .encrypt-button-gradient { opacity: 1; }
 
-.encrypt-button-content {
-  position: relative;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
-.encrypt-button-gradient {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  scale: 1.25;
-  background: linear-gradient(
-    to top,
-    rgba(129, 140, 248, 0) 0%,
-    rgba(129, 140, 248, 0) 40%,
-    rgba(129, 140, 248, 1) 50%,
-    rgba(129, 140, 248, 0) 60%,
-    rgba(129, 140, 248, 0) 100%
-  );
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.encrypt-button:hover .encrypt-button-gradient {
-  opacity: 1;
-}
-
-/* Mobile Responsive Button */
+/* ============================================
+   MOBILE OPTIMIZATIONS
+   ============================================ */
 @media (max-width: 768px) {
-  .encrypt-button {
-    margin-top: 1.5rem;
-    padding: 0.7rem 2rem;
-    font-size: 1rem;
-    width: 100%;
-    max-width: 280px;
-  }
-}
-
-@media (max-width: 480px) {
-  .encrypt-button {
-    padding: 0.65rem 1.5rem;
-    font-size: 0.9rem;
-    max-width: 220px;
-    letter-spacing: 1.5px;
-  }
-}
-
-/* Mobile Responsive Styles */
-@media (max-width: 768px) {
-  .eventpage {
-    overflow-x: hidden;
-  }
-
   .event-content {
+    display: flex; /* Switch to Flexbox for simpler reordering */
     flex-direction: column;
-    padding: 3rem 1.5rem 2rem;
-    gap: 2rem;
-    min-height: 100vh;
-    justify-content: center;
-    align-items: center;
+    padding: 100px 2rem 2rem; 
+    text-align: center;
+    gap: 1rem;
   }
+
+  .grid-cell {
+    width: 100%;
+  }
+
+  /* Reorder elements for mobile view */
+  .grid-cell:nth-child(1) { order: 2; } /* Text */
+  .grid-cell:nth-child(2) { order: 1; } /* Image */
 
   .drink-info {
-    max-width: 100%;
-    text-align: center;
-    order: 2;
+    align-items: center; /* Center the button */
   }
 
-  .drink-info h1 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-  }
+  .drink-info h1 { font-size: 2.5rem; }
+  .drink-info h3 { font-size: 1.2rem; }
+  .drink-info p { font-size: 0.9rem; max-width: 100%; }
 
-  .drink-info h3 {
+  .drink-image {
+    max-width: 80%;
+  }
+  
+  .encrypt-button {
     font-size: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  .drink-info p {
-    font-size: 0.9rem;
-    line-height: 1.6;
-  }
-
-  .drink-image {
-    width: 80% !important;
-    max-width: 300px !important;
-    height: auto;
-    order: 1;
-  }
-}
-
-/* Extra small devices */
-@media (max-width: 480px) {
-  .drink-info h1 {
-    font-size: 1.5rem;
-  }
-
-  .drink-info h3 {
-    font-size: 0.9rem;
-  }
-
-  .drink-info p {
-    font-size: 0.85rem;
-  }
-
-  .drink-image {
-    width: 90% !important;
-    max-width: 250px !important;
-  }
-
-  .event-content {
-    padding: 2rem 1rem 2rem;
-  }
-}
-
-/* Tablet landscape */
-@media (min-width: 481px) and (max-width: 768px) {
-  .drink-image {
-    width: 60% !important;
-    max-width: 350px !important;
+    padding: 0.7rem 2rem;
   }
 }

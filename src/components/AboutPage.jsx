@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/AboutPage.css";
-import Header from "./Header.jsx";
+// import Header from "./Header.jsx";
 
 const teamMembers = [
   {
@@ -10,7 +10,7 @@ const teamMembers = [
   },
   {
     name: "Manashree Jibhkate",
-    role: "Event Co coordinator",
+    role: "Event Co-coordinator",
     image: "/images/Manashree.jpeg",
   },
   {
@@ -33,35 +33,20 @@ const teamMembers = [
     role: "Lead Web Dev.",
     image: "/images/Eklawaya_chauhan.jpeg",
   },
-  
-  
-  
-
 ];
 
 const AboutPage = () => {
   return (
     <div className="about-page">
-      <Header />
+      {/* <Header /> */}
 
-      {/* Background Video (same style as EventPage) */}
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="background-video"
-      >
-        <source src="/images/854225-hd_1920_1080_30fps.mp4" type="video/mp4" />
-      </video>
-
-      {/* Overlay */}
+      {/* The overlay is kept for the dark shade effect over the background image */}
       <div className="overlay" />
 
       {/* Main Content */}
       <div className="about-content">
         <section className="intro">
-          <h1>What is NEXUS...?</h1>
+          <h1>What is  AI NEXUS...?</h1>
           <p>
             <strong>AI NEXUS</strong> is a national-level celebration of innovation, technology, and collaboration. This two-day event brings together brilliant minds, top companies, and passionate students to explore the limitless possibilities of Artificial Intelligence and emerging technologies.
                 From thrilling competitions and creative challenges to insightful industry talks and networking opportunities, Techverse AI provides a platform for students, professionals, and innovators to showcase their skills, share ideas, and shape the future of technology.
@@ -77,7 +62,6 @@ const AboutPage = () => {
           </p>
         </section>
 
-        {/* Team Section */}
         <section className="team">
           <h2>Meet Our Team</h2>
           <div className="team-grid">

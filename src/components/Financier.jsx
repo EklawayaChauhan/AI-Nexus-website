@@ -1,6 +1,9 @@
 import React from 'react';
 import '../styles/Financier.css';
-import Header from "./Header.jsx";
+import bgVideo from "../assets/Sponcers_background.mp4";
+
+
+
 // Data for each financier company
 const financierData = [
   {
@@ -38,7 +41,7 @@ const financierData = [
 const FinancierPage = () => {
   return (
     <div className="financier-page">
-        <Header />
+
         <video
         autoPlay
         muted
@@ -46,9 +49,9 @@ const FinancierPage = () => {
         playsInline
         className="background-video"
       >
-        <source src="/images/854225-hd_1920_1080_30fps.mp4" type="video/mp4" />
+        <source src={bgVideo} type="video/mp4" />
       </video>
-      <h1 className="page-title">Our Financiers</h1>
+      <h1 className="page-title">Our Company Partners</h1>
       <div className="card-container">
         {financierData.map((company, index) => (
           <div className="financier-card" key={index}>
