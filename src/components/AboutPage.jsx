@@ -1,8 +1,8 @@
 import React from "react";
 import "../styles/AboutPage.css";
-// import Header from "./Header.jsx";
 
 const teamMembers = [
+  // ... your team members array ...
   {
     name: "Akshata Patil",
     role: "Event Coordinator",
@@ -38,11 +38,8 @@ const teamMembers = [
 const AboutPage = () => {
   return (
     <div className="about-page">
-      {/* <Header /> */}
-
-      {/* The overlay is kept for the dark shade effect over the background image */}
-      <div className="overlay" />
-
+      {/* ✅ REMOVED: The separate overlay div is gone. */}
+      
       {/* Main Content */}
       <div className="about-content">
         <section className="intro">
