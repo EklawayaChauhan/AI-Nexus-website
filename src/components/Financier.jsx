@@ -1,8 +1,5 @@
 import React from 'react';
 import '../styles/Financier.css';
-import bgVideo from "../assets/Sponcers_background.mp4";
-
-
 
 // Data for each financier company
 const financierData = [
@@ -38,36 +35,43 @@ const financierData = [
   }
 ];
 
+// Helper function to render a single card
+const CompanyCard = ({ company }) => (
+  <div className="financier-card" key={company.name}>
+    <div className="card-header">
+      <img src={company.logoUrl} alt={`${company.name} Logo`} className="card-logo" />
+    </div>
+    <div className="card-body">
+      <h3 className="card-name">{company.name}</h3>
+      <p className="card-description">{company.description}</p>
+    </div>
+    <div className="card-footer">
+      <a href={company.websiteUrl} target="_blank" rel="noopener noreferrer" className="card-button">
+        Visit Website
+      </a>
+    </div>
+  </div>
+);
+
 const FinancierPage = () => {
+  // Separate the top companies from the rest
+  const topCompanyNames = ['Dataventics', 'Procohat Technologies'];
+  const topCompanies = financierData.filter(company => topCompanyNames.includes(company.name));
+  const otherCompanies = financierData.filter(company => !topCompanyNames.includes(company.name));
+
   return (
     <div className="financier-page">
-
-        <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="background-video"
-      >
-        <source src={bgVideo} type="video/mp4" />
-      </video>
       <h1 className="page-title">Our Company Partners</h1>
+      
       <div className="card-container">
-        {financierData.map((company, index) => (
-          <div className="financier-card" key={index}>
-            <div className="card-header">
-              <img src={company.logoUrl} alt={`${company.name} Logo`} className="card-logo" />
-            </div>
-            <div className="card-body">
-              <h3 className="card-name">{company.name}</h3>
-              <p className="card-description">{company.description}</p>
-            </div>
-            <div className="card-footer">
-              <a href={company.websiteUrl} target="_blank" rel="noopener noreferrer" className="card-button">
-                Visit Website
-              </a>
-            </div>
-          </div>
+        {topCompanies.map(company => (
+          
+          <CompanyCard company={company} key={company.name} />
+        ))}
+        <h2 className="coming-soon-heading">More companies coming soon...</h2>
+
+        {otherCompanies.map(company => (
+          <CompanyCard company={company} key={company.name} />
         ))}
       </div>
     </div>
