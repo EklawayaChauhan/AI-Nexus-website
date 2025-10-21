@@ -11,7 +11,7 @@ const drinks = [
     subtext: "Creativity for BOTs.",
     description:
       " BOT-NOT is a super fun and interactive game where you get to guess whether a creation is made by AI or a human! As you play, you’ll earn points and have a blast competing for the top spot, all while sharpening your observation and analytical skills. Comejoin the fun and see how many you can get right ",
-      image: "/images/Jupiter.png",
+      image: "/images/Earth.png",
     pdfUrl: "/rulebooks/BOT OR NOT.pdf",
   },
   {
@@ -19,7 +19,7 @@ const drinks = [
     subtext: "Trading Contest.",
     description:
       " This is your chance to prove your financial instincts and analytical skills under pressure. Think fast, trade smart, and may the best trader win! 📈⚡",
-    image: "/images/Mars.png",
+    image: "/images/Saturn.png",
     pdfUrl: "/rulebooks/TRADE TECH CHALLENGE .pdf",
   },
   
@@ -37,7 +37,7 @@ const drinks = [
     subtext: "Decoding contest.",
     description:
       " In the Find the Glitch game, participants will analyze given code snippets and identify errors or bugs present in them. Thegame will test their debugging skills across different levels, such as easy, moderate, and high difficulty. Each round will feature coding problems with logical, syntactical, or semantic errors, and participants will be required to find and correct them within a given time limit.",
-    image: "/images/Saturn.png",
+    image: "/images/Mars.png",
     pdfUrl: "/rulebooks/BUG HUNT.pdf",
   },
   
@@ -47,7 +47,7 @@ const drinks = [
     subtext: "Web Creativity.",
     description:
       "Teams will design their main page with dynamic features, animations, and interactive elements",
-    image: "/images/Jupiter.png",
+    image: "/images/Venus.png",
     pdfUrl: "/rulebooks/WEBCRAFT.pdf",
   },
   {
@@ -55,7 +55,7 @@ const drinks = [
     subtext: "Debate over Artificial Intelligence.",
     description:
       "Welcome to the AI Debate Competition, where intellect, reasoning, and adaptability collide!This unique debate challenges participants to test their debating skills first against Artificial Intelligence (AI) and then against fellow human opponents",
-    image: "/images/Earth.png",
+    image: "/images/Uranes.png",
     pdfUrl: "/rulebooks/AI DEBATE .pdf",
   },
   {
@@ -63,7 +63,7 @@ const drinks = [
     subtext: "Hackthon.",
     description:
       "Welcome to CodeSprint, the ultimate hackathon where innovation, teamwork, and coding brilliance collide! Your mission? To ideate, design, and build impactful solutions within the given timeframe.",
-     image: "/images/Pluto.G09.watermarked.2k.png",
+     image: "/images/Jupiter.png",
     pdfUrl: "/rulebooks/sCODESPRINT HACKATHON.pdf",
   },
 ];
