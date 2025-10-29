@@ -16,23 +16,11 @@ const financierData = [
     websiteUrl: 'https://www.procohat.com/'
   },
   {
-    name: 'Trust Systems & Software',
-    logoUrl: '/images/trust.webp',
-    description: 'A leading global provider of software solutions for the banking and financial services industry, specializing in Core Banking.',
-    websiteUrl: 'https://www.softtrust.com/'
+    name: 'PERSEVEX EDUCATION CONSULTANCY LLP',
+    logoUrl: '/images/pers.jpeg',
+    description: 'An e-learning platform offering industry-relevant courses in financial modeling, digital marketing, data science, and more to upskill students and professionals.',
+    websiteUrl: 'https://www.persevex.com/'
   },
-  {
-    name: 'Pugarch Technology',
-    logoUrl: '/images/pug.png',
-    description: 'Empowering startups and SMEs with innovative software development and strategic IT consulting services.',
-    websiteUrl: 'https://pugarch.in/'
-  },
-  {
-    name: 'AnkHub Technology Services',
-    logoUrl: '/images/ank.png',
-    description: 'A trusted partner for innovative software solutions, empowering businesses to thrive in the digital age.',
-    websiteUrl: 'https://ankhub.in/'
-  }
 ];
 
 // Helper function to render a single card
